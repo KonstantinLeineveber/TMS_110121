@@ -19,10 +19,10 @@ public class Zad10 {
 
         if (x <= -1) {
             System.out.println("программисты не могут быть отрицательными");
-        } else if (b == 1) {
-            System.out.println(x + " программист");
         } else if (a >= 11 & a <= 19 ||  b >= 5 & b <= 9 || b == 0) {
             System.out.println(x + " программистов");
+        } else if (b == 1) {
+            System.out.println(x + " программист");
         } else {
             System.out.println(x + " программиста");
         }

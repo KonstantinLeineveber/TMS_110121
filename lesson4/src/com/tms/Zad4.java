@@ -4,7 +4,7 @@ public class Zad4 {
 
     public static void main(String[] args) {
 
-        int a = 14;
+        int a = -14;
 
         //В переменную записываем число. Надо вывести на экран сколько
         // в этом числе цифр и положительное оно или отрицательное.
@@ -12,22 +12,22 @@ public class Zad4 {
         // Достаточно будет определить, является ли число однозначным,
         // "двузначным или трехзначным и более/
 
-        if (a >= 0 & a <= 9) {
-            System.out.println("Число a однозначное положительное");
-        } else if (a >= 10 & a <= 99) {
-            System.out.println("Число a двузначное положительное");
-        } else if (a >= 100 & a <= 999) {
-            System.out.println("Число a трехзначное положительное");
-        } else if (a >= 1000) {
-            System.out.println("Число a положительное и в нем более 3 чисел");
-        } else if (a <= -1 & a >= -9) {
-            System.out.println("Число a однозначное отрицательное");
-        } else if (a <= -10 & a >= -99) {
-            System.out.println("Число a двузначное отрицательное");
-        } else if (a <= -100 & a >= -999) {
-            System.out.println("Число a трехначное отрицательное");
+        if (a >= 0) {
+            System.out.print("Число a положительное");
         } else {
-            System.out.println("Число a отрицательное и в нем более 3 чисел");
+            a = a * -1;
+            System.out.print("Число a отрицательное");
+        }
+        if (a >= 0 & a <= 9) {
+            System.out.print(" однозначное");
+        } else if (a >= 10 & a <= 99) {
+            System.out.print(" двузначное");
+        } else if (a >= 100 & a <= 999) {
+            System.out.print("  трехзначное");
+        } else {
+            System.out.print(" и в нем более 3 чисел");
+
+
         }
 
     }

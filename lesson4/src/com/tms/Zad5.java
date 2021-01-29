@@ -1,7 +1,5 @@
 package com.tms;
 
-import java.util.Random;
-
 public class Zad5 {
 
     public static void main(String[] args) {
