@@ -24,15 +24,6 @@ public class zad17 {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (j <= i) {
-                    arr[i][j] = '*';
-                    arr2[i][j] = ' ';
-
-                }
-            }
-        }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j]);
                 System.out.print(arr2[j][i]);
                 System.out.print(arr2[j][i]);
