@@ -42,7 +42,7 @@ public class KrestNol {
                     || pole[2][0] == x & pole[2][1] == x & pole[2][2] == x
                     || pole[0][2] == x & pole[1][1] == x & pole[2][0] == x
                     || pole[0][0] == x & pole[1][0] == x & pole[2][0] == x
-                    || pole[0][1] == x & pole[1][1] == x & pole[2][2] == x
+                    || pole[0][1] == x & pole[1][1] == x & pole[2][1] == x
                     || pole[0][2] == x & pole[1][2] == x & pole[2][2] == x) {
                 System.out.println("Вы победили!");
                 return;
@@ -75,7 +75,7 @@ public class KrestNol {
                     || pole[2][0] == o & pole[2][1] == o & pole[2][2] == o
                     || pole[0][2] == o & pole[1][1] == o & pole[2][0] == o
                     || pole[0][0] == o & pole[1][0] == o & pole[2][0] == o
-                    || pole[0][1] == o & pole[1][1] == o & pole[2][2] == o
+                    || pole[0][1] == o & pole[1][1] == o & pole[2][1] == o
                     || pole[0][2] == o & pole[1][2] == o & pole[2][2] == o) {
                 System.out.println("Вы проиграли!");
                 return;
