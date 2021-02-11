@@ -1,5 +1,8 @@
 package string;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class zad18 {
     public static void main(String[] args) {
 //        Найти в строке не только запятые, но и другие знаки препинания. Подсчитать
@@ -19,13 +22,10 @@ public class zad18 {
                 "логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно " +
                 "литературно обработанное»[1]. ";
         int n = 0;
-        char symbol;
-        for (int i = 0; i < str.length(); i++) {
-            symbol = str.charAt(i);
-            if (symbol == ',' || symbol == '.' || symbol == '-' || symbol == ':' || symbol == ';'
-                    || symbol == '!' || symbol == '?' || symbol == '(' || symbol == ')') {
-                n++;
-            }
+        Pattern pattern = Pattern.compile("[.,—:;!?()]");
+        Matcher m = pattern.matcher(str);
+        while (m.find()) {
+            n++;
         }
         System.out.println("У нас есть " + n + " знаков препинания");
 

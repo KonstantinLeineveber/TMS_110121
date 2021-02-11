@@ -8,28 +8,12 @@ public class zad20 {
         String str = " Существуют две основные трактовки понятия текст: имманентная (расширенная, философски нагруженная) и " +
                 "репрезентативная (более частная).       ";
 
+        str = str.replaceAll("(?U)\\W", " ");
         str = str.trim();
+        String[] str1 = str.split(" +");
         String lastL = "";
-        char symbol, symbol1;
-        for (int i = 0; i < str.length(); i++) {
-            if (i + 1 == str.length()) {
-                break;
-            }
-            symbol = str.charAt(i);
-            symbol1 = str.charAt(i + 1);
-            if (symbol == ',' || symbol == '.' || symbol == '-' || symbol == ':' || symbol == ';'
-                    || symbol == '!' || symbol == '?' || symbol == ' ' || symbol == ')') {
-                if (symbol1 == ',' || symbol1 == '.' || symbol1 == '-' || symbol1 == ':' || symbol1 == ';'
-                        || symbol1 == '!' || symbol1 == '?' || symbol1 == ' ' || symbol1 == ')') {
-                    symbol = str.charAt(i - 1);
-                    lastL += str.valueOf(symbol);
-                } else if (str.charAt(i - 1) == ',' || str.charAt(i - 1) == '.' || str.charAt(i - 1) == '-' || str.charAt(i - 1) == ':' || str.charAt(i - 1) == ';'
-                        || str.charAt(i - 1) == '!' || str.charAt(i - 1) == '?' || str.charAt(i - 1) == ' ' || str.charAt(i - 1) == ')') {
-                } else {
-                    symbol = str.charAt(i - 1);
-                    lastL += str.valueOf(symbol);
-                }
-            }
+        for (String word : str1) {
+            lastL += word.toCharArray()[word.length() - 1];
         }
         System.out.println(lastL);
 

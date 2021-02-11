@@ -13,7 +13,7 @@ public class zad23 {
         String text = "fgb <p> <p id=”p1”> <p> <p id=”p1”> <p> <p> <p> <p id=”p1”> <p id=”p1”> fghdfgfgb";
         Pattern pattern = Pattern.compile("-*<p>");
         Matcher m = pattern.matcher(text);
-        Pattern pattern1 = Pattern.compile("-*<p id=”p[0-9]*”>");
+        Pattern pattern1 = Pattern.compile("<{1}p{1}.{5,10}”>{1}");
         Matcher m1 = pattern1.matcher(text);
         while (m.find()) {
             System.out.println(m.group() + " ");
@@ -22,7 +22,7 @@ public class zad23 {
             System.out.println(m1.group() + " ");
         }
 
-        System.out.println(text.replaceAll("-*<p id=”p[0-9]*”>", "<p>"));
+        System.out.println(text.replaceAll("<{1}p{1}.{5,10}”>{1}", "<p>"));
     }
 }
 
