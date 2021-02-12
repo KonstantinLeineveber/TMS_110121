@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class KrestNol {
 
     public static void main(String[] args) {
-        Scanner str = new Scanner(System.in);
-        Scanner sto = new Scanner(System.in);
+        Scanner vvod = new Scanner(System.in);
         Random rand = new Random();
 
         System.out.println("Вы играете крестиками, вводить только заглавную букву Х");
@@ -17,18 +16,16 @@ public class KrestNol {
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Введите номер строки, где будете вводить крестик");
-            int strX = str.nextInt();
-            if (strX < 4 & strX > 0) {
-                System.out.println("Введите номер столбца, где будете вводить крестик");
-            } else {
-                System.out.println("Вы ввели неверное значение, начните игру заново");
-                return;
+            int strX = vvod.nextInt();
+            while (strX < 1 || strX > 3) {
+                System.out.println("Введите номер строки правильно");
+                strX = vvod.nextInt();
             }
-            int stoX = sto.nextInt();
-            if (stoX < 4 & stoX > 0) {
-            } else {
-                System.out.println("Вы ввели неверное значение, начните игру заново");
-                return;
+            System.out.println("Введите номер столбца, где будете вводить крестик");
+            int stoX = vvod.nextInt();
+            while (stoX < 1 || stoX > 3) {
+                System.out.println("Введите номер стролбца правильно");
+                stoX = vvod.nextInt();
             }
             if (pole[strX - 1][stoX - 1] == null) {
                 pole[strX - 1][stoX - 1] = x;
