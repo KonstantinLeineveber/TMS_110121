@@ -1,9 +1,11 @@
 package shop;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
-public class Shop {
+public class Shop implements Serializable {
 
     //    Создать класс Магазин, поля:
 //•Список товаров (изначально пустой)
@@ -34,6 +36,21 @@ public class Shop {
     }
 
     public void vseTovari() {
+        arrayTovar.sort(Comparator.comparing(obj -> obj.getId()));
+        for (Tovar tov : arrayTovar) {
+            System.out.println(tov);
+        }
+    }
+
+    public void vseTovariPoCene() {
+        arrayTovar.sort(Comparator.comparing(obj -> obj.getPrice()));
+        for (Tovar tov : arrayTovar) {
+            System.out.println(tov);
+        }
+    }
+
+    public void vseTovaripoDescindingDataDobavleniya() {
+        arrayTovar.sort(Comparator.comparing(Tovar::getId).reversed());
         for (Tovar tov : arrayTovar) {
             System.out.println(tov);
         }

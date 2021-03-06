@@ -48,5 +48,6 @@ public class Tovar {
                 "Цена: " + getPrice() + '\n' +
                 "id товара: " + getId() + '\n';
     }
+
 }
 
