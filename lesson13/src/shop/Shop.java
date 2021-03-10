@@ -50,9 +50,8 @@ public class Shop implements Serializable {
     }
 
     public void vseTovaripoDescindingDataDobavleniya() {
-        arrayTovar.sort(Comparator.comparing(Tovar::getId).reversed());
-        for (Tovar tov : arrayTovar) {
-            System.out.println(tov);
+        for (int i = 0; i < arrayTovar.size(); i++) {
+            System.out.println(arrayTovar.get(arrayTovar.size() - 1 - i));
         }
     }
 
