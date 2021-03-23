@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Devices>
+    <Device name="Videocard Nvidia Geforce RTX 2070">
+        <Origin>China</Origin>
+        <Price currency="USD">2500</Price>
+        <Type>External</Type>
+        <Details>
+            <PeripheralDevice>No</PeripheralDevice>
+            <PowerConsumption calculus="Vt">200</PowerConsumption>
+            <Cooler>Yes</Cooler>
+            <ComponentGroup>I/O device</ComponentGroup>
+            <Port>LPT</Port>
+        </Details>
+        <Critical>Yes</Critical>
+    </Device>
+
+</Devices>
