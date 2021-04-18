@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="Devices">
+        <xsd:complexType>
+            <xsd:sequence>
+
+                <xsd:element name="Device" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+
+                            <xsd:element name="Origin" type="xsd:string"/>
+
+                            <xsd:element name="Price" type="currency"/>
+
+                            <xsd:element name="Type" type="xsd:string" maxOccurs="20"/>
+
+                            <xsd:element name="Details" maxOccurs="unbounded">
+                                <xsd:complexType>
+
+                                    <xsd:sequence>
+                                        <xsd:element name="PeripheralDevice" default="No">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:maxLength value="3"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+
+                                        <xsd:element name="PowerConsumption" type="calculus"/>
+
+                                        <xsd:element name="Cooler" default="No">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:maxLength value="3"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+
+                                        <xsd:element name="ComponentGroup">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:maxLength value="20"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+
+                                        <xsd:element name="Port">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="3"/>
+                                                    <xsd:maxLength value="3"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+
+                            <xsd:element name="Critical" type="xsd:string" default="Yes"/>
+
+                        </xsd:sequence>
+
+                        <xsd:attribute name="name">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="100"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:attribute>
+
+                    </xsd:complexType>
+                </xsd:element>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="currency">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:decimal">
+                <xsd:attribute name="currency">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="BYN"/>
+                            <xsd:enumeration value="USD"/>
+                            <xsd:enumeration value="EURO"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="calculus">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:integer">
+                <xsd:attribute name="calculus">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="Vt"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:attribute>
+            </xsd:extension>
+        </xsd:simpleContent>
+
+    </xsd:complexType>
+</xsd:schema>
