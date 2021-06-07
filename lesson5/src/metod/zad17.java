@@ -11,42 +11,35 @@ public class zad17 {
 //        1 1 1 1 1
 
         char[][] arr = new char[5][5];
-        char[][] arr2 = new char[5][5];
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+        for (int i = 0; i < arr.length / 2 + 1; i++) {
+            for (int j = 0; j < arr.length - i; j++) {
+                if (j >= i) {
+                    arr[i][j] = '1';
+                }
+            }
+        }
+        for (int i = arr.length / 2 + 1; i < arr.length; i++) {
+            for (int j = arr.length; j > arr.length - i - 2; j--) {
                 if (j <= i) {
-                    arr[i][j] = '*';
-                    arr2[i][j] = ' ';
+                    arr[i][j] = '1';
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i][j] != '1') {
+                    arr[i][j] = '0';
                 }
             }
         }
 
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
+            for (int j = 0; j < arr.length; j++) {
                 System.out.print(arr[i][j]);
-                System.out.print(arr2[j][i]);
-                System.out.print(arr2[j][i]);
-
-            }
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j]);
+//                System.out.print(arr[j][i]);
             }
             System.out.println();
         }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[j][i]);
-
-
-            }
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr2[i][j]);
-                System.out.print(arr2[i][j]);
-                System.out.print(arr[j][i]);
-            }
-            System.out.println();
-        }
-
     }
 }

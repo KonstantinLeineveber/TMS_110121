@@ -6,8 +6,8 @@ public class hw4 {
         int a = 8;
         int b = 11;
         int summ = 0;
-        for (int i = 0; i < b; i++) {
-            summ += a;
+        for (int i = 0; i < a; i++) {
+            summ += b;
         }
         System.out.println(summ);
     }

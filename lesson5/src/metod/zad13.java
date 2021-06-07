@@ -7,17 +7,14 @@ public class zad13 {
 //        из них
 
         int array[] = {16, 546, 234, 6456, 2342, 1, 78978};
-        for (int start = 0; start < array.length - 1; start++) {
-            for (int index = 0; index < array.length - 1 - start; index++) {
-                if (array[index] < array[index + 1]) {
-                    int tmp = array[index];
-                    array[index] = array[(index + 1)];
-                    array[(index + 1)] = tmp;
-                }
+        int max = array[0];
+        for (int index = 0; index < array.length - 1; index++) {
+            if (max < array[index + 1]) {
+                max = array[index + 1];
             }
         }
 
-        System.out.println(array[0]);
+        System.out.println(max);
 
 
     }
