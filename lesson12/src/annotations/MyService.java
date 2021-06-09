@@ -2,24 +2,24 @@ package annotations;
 
 @Version(num = 7.1, nameVersion = "Nougat")
 public class MyService {
-    private double version = 7.1;
-    private String nameVersion = "Nougat";
+    private double fontSize = 13.5;
+    private String option = "Setting";
     private String dataVersion = "16.01.2021";
 
-    public double getVersion() {
-        return version;
+    public double getFontSize() {
+        return fontSize;
     }
 
-    public void setVersion(double version) {
-        this.version = version;
+    public void setFontSize(double fontSize) {
+        this.fontSize = fontSize;
     }
 
-    public String getNameVersion() {
-        return nameVersion;
+    public String getOption() {
+        return option;
     }
 
-    public void setNameVersion(String nameVersion) {
-        this.nameVersion = nameVersion;
+    public void setOption(String option) {
+        this.option = option;
     }
 
     @Override
@@ -33,8 +33,8 @@ public class MyService {
     }
 
     private String thisClassInfo() {
-        return "Версия: " + getVersion() + '\n'
-                + "Название версии: " + getNameVersion() + '\n'
+        return "Размер шрифта: " + getFontSize() + '\n'
+                + "Название опции: " + getOption() + '\n'
                 + "Хэшкод: " + hashCode();
 
     }

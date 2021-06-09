@@ -2,7 +2,6 @@ package annotations;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Objects;
 
 public class Runner {
 
@@ -36,8 +35,8 @@ public class Runner {
             for (Method m : methods) {
                 Version annotation = m.getAnnotation(Version.class);
             }
-            myService2.setVersion(3.6);
-            myService2.setNameVersion("Armagedon");
+            myService2.setFontSize(3.6);
+            myService2.setOption("Armagedon");
             Field privateStringField = clazz.getDeclaredField("dataVersion");
 
             privateStringField.setAccessible(true);
