@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class zad29 {
+public class Zad29 {
     public static void main(String[] args) {
 
 //        Создать список оценок учеников с помощью ArrayList, заполнить случайными

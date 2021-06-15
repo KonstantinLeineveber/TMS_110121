@@ -1,10 +1,9 @@
 import java.util.LinkedHashMap;
 
-public class zad32 {
+public class Zad32 {
     public static void main(String[] args) {
 //  Имеется текст. Следует составить для него частотный словарь.
         LinkedHashMap<String, Integer> text = new LinkedHashMap<>();
-        int j = 0;
         String str = "Частотный словарь (или частотный список) — " +
                 "набор слов данного языка (или подъязыка) вместе с " +
                 "информацией о частоте их встречаемости. Словарь может " +
@@ -20,16 +19,13 @@ public class zad32 {
         str = str.replaceAll("(?U)\\W", " ");
         str = str.trim();
         String[] str1 = str.split(" +");
+
         for (String s : str1) {
-            for (String value : str1) {
-                if (s.equals(value)) {
-                    j++;
-                }
+            if (!text.containsKey(s)) {
+                text.put(s, 1);
+            } else {
+                text.put(s, text.get(s) + 1);
             }
-            if (!text.containsValue(s)) {
-                text.put(s, j);
-            }
-            j = 0;
 
         }
         System.out.println("Частотный словарь для строки str = " + text);

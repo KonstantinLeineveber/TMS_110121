@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class zad31 {
+public class Zad31 {
     public static void main(String[] args) {
 
         int i = 0;

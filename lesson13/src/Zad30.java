@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class zad30 {
+public class Zad30 {
     public static void main(String[] args) {
 //        Создать коллекцию, наполнить ее случайными числами. Удалить повторяющиеся
 //        числа.
