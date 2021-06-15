@@ -1,6 +1,6 @@
 package zad25;
 
-class bankomat {
+class Bankomat {
 //    Создать класс и объекты описывающие Банкомат. Набор купюр находящихся в
 //    банкомате должен задаваться тремя свойствами: количеством купюр номиналом 20
 //            50 100. Сделать методы для добавления денег в банкомат. Сделать функцию
@@ -27,6 +27,7 @@ class bankomat {
     void snyatie(int summSn) {
         if (summ >= summSn) {
             snyal = true;
+            summ -= summSn;
             System.out.println("Операция " + snyal);
         } else {
             snyal = false;
@@ -39,7 +40,6 @@ class bankomat {
         System.out.println("Количество купюр номиналом 20 рублей = " + d + ", на сумму = " + d * 20);
         System.out.println("Количество купюр номиналом 50 рублей = " + p + ", на сумму = " + p * 50);
         System.out.println("Количество купюр номиналом 100 рублей = " + s + ", на сумму = " + s * 100);
-        return;
 
     }
 }

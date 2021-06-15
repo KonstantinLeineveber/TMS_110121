@@ -25,8 +25,8 @@ public class Legkovoj extends Nazemnij {
         return getMochnost() * 0.74f;
     }
 
-    public StringBuilder legk(int mochnost, int maxSkor, int mass, String marka,
-                              int kolesa, float rashod, String tipKuzova, int kolPass) {
+    public void legk(int mochnost, int maxSkor, int mass, String marka,
+                     int kolesa, float rashod, String tipKuzova, int kolPass) {
         setMochnost(mochnost);
         setMaxSkor(maxSkor);
         setMass(mass);
@@ -35,16 +35,14 @@ public class Legkovoj extends Nazemnij {
         setRashod(rashod);
         setTipKuzova(tipKuzova);
         setKolPass(kolPass);
-        StringBuilder s = new StringBuilder();
-        s.append("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n");
-        s.append("Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n");
-        s.append("Масса: " + getMass() + "кг" + "\n");
-        s.append("Марка: " + getMarka() + "\n");
-        s.append("Количество колес: " + getKolesa() + "шт" + "\n");
-        s.append("Расход топлива: " + getRashod() + "л/100км" + "\n");
-        s.append("Тип кузова: " + getTipKuzova() + "\n");
-        s.append("Количество пассажиров: " + getKolPass() + "чел");
-        return s;
+        System.out.println("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n" +
+                "Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n" +
+                "Масса: " + getMass() + "кг" + "\n" +
+                "Марка: " + getMarka() + "\n" +
+                "Количество колес: " + getKolesa() + "шт" + "\n" +
+                "Расход топлива: " + getRashod() + "л/100км" + "\n" +
+                "Тип кузова: " + getTipKuzova() + "\n" +
+                "Количество пассажиров: " + getKolPass() + "чел");
     }
 
     public String vremya(int vremya) {

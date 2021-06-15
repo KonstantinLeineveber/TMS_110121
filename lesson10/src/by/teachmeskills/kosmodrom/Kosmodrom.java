@@ -3,7 +3,7 @@ package by.teachmeskills.kosmodrom;
 public class Kosmodrom {
 
 
-    public void zapusk(Istart korabl) {
+    public static void zapusk(Istart korabl) {
         if (!korabl.proverka()) {
             System.out.println("Предстартовая проверка провалена");
         } else {

@@ -16,7 +16,17 @@ import by.teachmeskills.human.shtani.Shtani;
 public class Run {
     public static void main(String[] args) {
 
-        Human human = new Human(new Kosuha(), new Bruki(), new Botinki());
+        Kurtka kosuha = new Kosuha();
+        Kurtka parka = new Parka();
+        Kurtka puhovik = new Puhovik();
+        Shtani bruki = new Bruki();
+        Shtani jinsi = new Jinsi();
+        Shtani joggeri = new Joggeri();
+        Obuv botinki = new Botinki();
+        Obuv sapogi = new Sapogi();
+        Obuv tufli = new Tufli();
+
+        PreHuman human = new Human(kosuha, bruki, botinki);
         System.out.println("Первый человек:");
         System.out.println("Мое имя - " + human.name("Петя") + " и вот моя история");
         human.odet();
@@ -24,20 +34,20 @@ public class Run {
         human.snyat();
         System.out.println();
 
-        Human2 human2 = new Human2(new Parka(), new Jinsi(), new Sapogi());
+        PreHuman human2 = new Human(parka, jinsi, sapogi);
         System.out.println("Второй человек:");
         System.out.println("Мое имя - " + human.name("Коля") + " и вот моя история");
-        human.odet();
+        human2.odet();
         System.out.println("Спустя какое-то время");
-        human.snyat();
+        human2.snyat();
         System.out.println();
 
-        Human3 human3 = new Human3(new Puhovik(), new Joggeri(), new Tufli());
+        PreHuman human3 = new Human(puhovik, joggeri, tufli);
         System.out.println("Третий человек:");
         System.out.println("Мое имя - " + human.name("Толя") + " и вот моя история");
-        human.odet();
+        human3.odet();
         System.out.println("Спустя какое-то время");
-        human.snyat();
+        human3.snyat();
 
     }
 }

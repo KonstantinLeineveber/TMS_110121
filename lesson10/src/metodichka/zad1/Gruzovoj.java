@@ -17,8 +17,8 @@ public class Gruzovoj extends Nazemnij {
         return getMochnost() * 0.74f;
     }
 
-    public StringBuilder gruz(int mochnost, int maxSkor, int mass, String marka,
-                              int kolesa, float rashod, int gruzo) {
+    public void gruz(int mochnost, int maxSkor, int mass, String marka,
+                     int kolesa, float rashod, int gruzo) {
         setMochnost(mochnost);
         setMaxSkor(maxSkor);
         setMass(mass);
@@ -26,15 +26,13 @@ public class Gruzovoj extends Nazemnij {
         setKolesa(kolesa);
         setRashod(rashod);
         setGruzo(gruzo);
-        StringBuilder s = new StringBuilder();
-        s.append("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n");
-        s.append("Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n");
-        s.append("Масса: " + getMass() + "кг" + "\n");
-        s.append("Марка: " + getMarka() + "\n");
-        s.append("Количество колес: " + getKolesa() + "шт" + "\n");
-        s.append("Расход топлива: " + getRashod() + "л/100км" + "\n");
-        s.append("Грузоподъемность: " + getGruzo() + "т");
-        return s;
+        System.out.println("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n" +
+                "Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n" +
+                "Масса: " + getMass() + "кг" + "\n" +
+                "Марка: " + getMarka() + "\n" +
+                "Количество колес: " + getKolesa() + "шт" + "\n" +
+                "Расход топлива: " + getRashod() + "л/100км" + "\n" +
+                "Грузоподъемность: " + getGruzo() + "т");
     }
 
     public String zagruzka(int zagr) {

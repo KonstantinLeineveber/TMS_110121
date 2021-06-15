@@ -2,7 +2,7 @@ package by.teachmeskills.kosmodrom;
 
 import java.util.Random;
 
-class SpaceX extends Kosmodrom implements Istart {
+class SpaceX implements Istart {
 
 
     @Override

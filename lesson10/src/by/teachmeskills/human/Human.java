@@ -1,47 +1,47 @@
 package by.teachmeskills.human;
 
 
-import by.teachmeskills.human.kutrka.Kosuha;
-import by.teachmeskills.human.obuv.Botinki;
-import by.teachmeskills.human.shtani.Bruki;
+import by.teachmeskills.human.kutrka.Kurtka;
+import by.teachmeskills.human.obuv.Obuv;
+import by.teachmeskills.human.shtani.Shtani;
 
 public class Human implements PreHuman {
-    private Kosuha kosuha;
-    private Bruki bruki;
-    private Botinki botinki;
+    private Kurtka kurtka;
+    private Shtani shtani;
+    private Obuv obuv;
 
 
-    public Human(Kosuha kosuha, Bruki bruki, Botinki botinki) {
-        this.kosuha = kosuha;
-        this.bruki = bruki;
-        this.botinki = botinki;
+    public Human(Kurtka kurtka, Shtani shtani, Obuv obuv) {
+        this.kurtka = kurtka;
+        this.shtani = shtani;
+        this.obuv = obuv;
     }
 
     public Human() {
     }
 
-    public Botinki getBotinki() {
-        return botinki;
+    public Obuv getObuv() {
+        return obuv;
     }
 
-    public void setBotinki(Botinki botinki) {
-        this.botinki = botinki;
+    public void setObuv(Obuv obuv) {
+        this.obuv = obuv;
     }
 
-    public Bruki getBruki() {
-        return bruki;
+    public Shtani getShtani() {
+        return shtani;
     }
 
-    public void setBruki(Bruki bruki) {
-        this.bruki = bruki;
+    public void setShtani(Shtani shtani) {
+        this.shtani = shtani;
     }
 
-    public Kosuha getKosuha() {
-        return kosuha;
+    public Kurtka getKurtka() {
+        return kurtka;
     }
 
-    public void setKosuha(Kosuha kosuha) {
-        this.kosuha = kosuha;
+    public void setKurtka(Kurtka kurtka) {
+        this.kurtka = kurtka;
     }
 
     @Override
@@ -51,16 +51,16 @@ public class Human implements PreHuman {
 
     @Override
     public void odet() {
-        kosuha.nadetKurtka();
-        bruki.nadetShtani();
-        botinki.nadetObuv();
+        kurtka.nadetKurtka();
+        shtani.nadetShtani();
+        obuv.nadetObuv();
     }
 
     @Override
     public void snyat() {
-        kosuha.snyatKurtka();
-        bruki.snyatShtani();
-        botinki.snyatObuv();
+        kurtka.snyatKurtka();
+        shtani.snyatShtani();
+        obuv.snyatObuv();
     }
 
 

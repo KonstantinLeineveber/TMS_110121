@@ -26,8 +26,8 @@ public class Voennij extends Vozdushnij {
         return getMochnost() * 0.74f;
     }
 
-    public StringBuilder voenn(int mochnost, int maxSkor, int mass, String marka,
-                               int razmah, int minDlina, boolean katapult, int raket) {
+    public void voenn(int mochnost, int maxSkor, int mass, String marka,
+                      int razmah, int minDlina, boolean katapult, int raket) {
         setMochnost(mochnost);
         setMaxSkor(maxSkor);
         setMass(mass);
@@ -36,16 +36,14 @@ public class Voennij extends Vozdushnij {
         setMinDlina(minDlina);
         setKatapult(katapult);
         setRaket(raket);
-        StringBuilder s = new StringBuilder();
-        s.append("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n");
-        s.append("Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n");
-        s.append("Масса: " + getMass() + "кг" + "\n");
-        s.append("Марка: " + getMarka() + "\n");
-        s.append("Размах крыльев: " + getRazmah() + "м" + "\n");
-        s.append("Минимальная длина взлётно-посадочной полосы для взлёта: " + getMinDlina() + "м" + "\n");
-        s.append("Наличие системы катапультирования: " + getKatapult() + "\n");
-        s.append("Кол-во ракет на борту: " + getRaket() + "шт");
-        return s;
+        System.out.println("Мощность: " + getMochnost() + " л.с. или " + " или " + kilovatt() + "кВ" + "\n" +
+                "Максимальная скорость: " + getMaxSkor() + "км/ч" + "\n" +
+                "Масса: " + getMass() + "кг" + "\n" +
+                "Марка: " + getMarka() + "\n" +
+                "Размах крыльев: " + getRazmah() + "м" + "\n" +
+                "Минимальная длина взлётно-посадочной полосы для взлёта: " + getMinDlina() + "м" + "\n" +
+                "Наличие системы катапультирования: " + getKatapult() + "\n" +
+                "Кол-во ракет на борту: " + getRaket() + "шт");
     }
 
     public String katap() {
