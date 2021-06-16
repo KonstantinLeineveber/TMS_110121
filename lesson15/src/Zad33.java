@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class zad33 {
+public class Zad33 {
     public static void main(String[] args) throws IOException {
 //        Создать файл с текстом, прочитать, подсчитать в тексте количество знаков
 //        препинания и слов
 
 
-        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("File.txt"));
 
         String res = br.readLine();
         StringBuilder result = new StringBuilder();

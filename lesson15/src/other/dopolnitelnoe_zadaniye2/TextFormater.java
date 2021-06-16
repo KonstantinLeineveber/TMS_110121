@@ -23,21 +23,12 @@ public class TextFormater {
         str = str.replaceAll("(?U)\\W", " ");
         str = str.trim();
         String[] str1 = str.split(" +");
-        for (int i = 0; i < str1.length; i++) {
-            char[] a = str1[i].toCharArray();
-            if (a.length > 1) {
-                z = 0;
-                for (int j = 0; j < a.length; j++) {
-                    if (a[j] == a[a.length - 1 - j]) {
-                        z++;
-                    }
-                    if (z == a.length) {
-                        isPalindrome = true;
-                    }
-                }
+        for (String s : str1) {
+            String a = new StringBuilder(s).reverse().toString();
+            if (a.equals(s)) {
+                isPalindrome = true;
             }
         }
         return isPalindrome;
     }
-
 }

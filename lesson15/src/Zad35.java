@@ -1,13 +1,13 @@
 import java.io.*;
 import java.util.Random;
 
-public class zad35 {
+public class Zad35 {
     public static void main(String[] args) throws IOException {
 //        Записать в двоичный файл 20 случайных чисел. Прочитать записанный файл,
 //                распечатать числа и их среднее арифметическое.
         int summ = 0;
         DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new
-                FileOutputStream("dvoi.dat")));
+                FileOutputStream("Dvoi.dat")));
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
             int rand = random.nextInt(100);
@@ -16,7 +16,7 @@ public class zad35 {
         dos.close();
 
         DataInputStream dis = new DataInputStream(new BufferedInputStream(new
-                FileInputStream("dvoi.dat")));
+                FileInputStream("Dvoi.dat")));
         System.out.print("20 случайных чисел  - ");
         int res = dis.readInt();
         while (true) {

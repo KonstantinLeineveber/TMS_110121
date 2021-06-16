@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class zad34 {
+public class Zad34 {
     public static void main(String[] args) throws IOException {
 //Имеется файл с текстом, в котором присутствуют числа. Найти все числа,
 //распечатать, посчитать сумму, убрать все повторяющиеся числа и снова
 //распечатать.
         int summ = 0;
-        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("File.txt"));
 
         String res = br.readLine();
         StringBuilder result = new StringBuilder();

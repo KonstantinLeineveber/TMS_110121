@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class zad36 {
+public class Zad36 {
     public static void main(String[] args) {
 //        Задание 36
 //        Вывести список файлов и каталогов выбранного каталога на диске. Файлы и каталоги
