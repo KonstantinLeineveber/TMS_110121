@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--        Входные данные следует брать их XML файла
+(прим. для библиотеки: книга/автор(или авторы)/жанр/год/мягкая
+или твердая обложка и т.д.)-->
+<books>
+    <book id="1">
+        <title>Человек на часах</title>
+        <author>Николай Лесков</author>
+        <genre>Классика</genre>
+        <year>1887</year>
+        <cover>Твердая</cover>
+    </book>
+    <book id="2">
+        <title>Гильдия Магов</title>
+        <author>Труди Канаван</author>
+        <genre>Фэнтези</genre>
+        <year>2005</year>
+        <cover>Мягкая</cover>
+    </book>
+    <book id="3">
+        <title>Старая Республика: Реван</title>
+        <author>Дрю Карпишин</author>
+        <genre>Приключения</genre>
+        <year>2000</year>
+        <cover>Твердая</cover>
+    </book>
+    <book id="4">
+        <title>Пассажир</title>
+        <author>Жан-Кристоф Гранже</author>
+        <genre>Детектив, Триллер</genre>
+        <year>2011</year>
+        <cover>Твердая</cover>
+    </book>
+    <book id="5">
+        <title>Наследница драконов. Добыча</title>
+        <author>Надежда Кузьмина</author>
+        <genre>Любовный роман</genre>
+        <year>2012</year>
+        <cover>Мягкая</cover>
+    </book>
+    <book id="6">
+        <title>Завтрак для чемпионов, или Прощай, черный понедельник</title>
+        <author>Курт Воннегут</author>
+        <genre>Антиутопия</genre>
+        <year>1973</year>
+        <cover>Твердая</cover>
+    </book>
+    <book id="7">
+        <title>Тайна кораллового рифа</title>
+        <author>Роберт Стайн</author>
+        <genre>Ужасы</genre>
+        <year>1994</year>
+        <cover>Твердая</cover>
+    </book>
+    <book id="8">
+        <title>Билл - Герой Галактики</title>
+        <author>Гарри Гаррисон</author>
+        <genre>Научная фантастика</genre>
+        <year>1965</year>
+        <cover>Мягкая</cover>
+    </book>
+    <book id="9">
+        <title>Инквизитор. Ордо Ксенос</title>
+        <author>Дэн Абнетт</author>
+        <genre>Фантастика</genre>
+        <year>2001</year>
+        <cover>Мягкая</cover>
+    </book>
+    <book id="10">
+        <title>Одной ногой в могиле</title>
+        <author>Джанин Фрост</author>
+        <genre>Ужасы</genre>
+        <year>2010</year>
+        <cover>Мягкая</cover>
+    </book>
+</books>
