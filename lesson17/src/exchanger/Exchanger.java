@@ -19,23 +19,12 @@ public class Exchanger {
 //    и делать обе эти операции одновременно (покупать доллары и продавать ЕВРО).
 
 
-    public static ReentrantLock lock = new ReentrantLock();
+//    public static ReentrantLock lock = new ReentrantLock();
 
     public static void main(String[] args) {
-        Buyer buyer = new Buyer();
+
         for (int i = 0; i < 12; i++) {
-            new Thread(() -> {
-                lock.lock();
-                try {
-                    System.out.print(Thread.currentThread().getName() + " сказал: ");
-                    buyer.CurrencyExchange();
-                } catch (Exception e) {
-                } finally {
-                    lock.unlock();
-                }
-            }).start();
+            new Buyer();
         }
     }
-
-
 }

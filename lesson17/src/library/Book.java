@@ -1,7 +1,7 @@
 package library;
 
 
-public class Books {
+public class Book {
     private Integer id;
     private String title;
     private String author;
@@ -9,11 +9,11 @@ public class Books {
     private String year;
     private String cover;
 
-    public Books() {
+    public Book() {
 
     }
 
-    public Books(Integer id, String title, String author, String genre, String year, String cover) {
+    public Book(Integer id, String title, String author, String genre, String year, String cover) {
         this.id = id;
         this.title = title;
         this.author = author;

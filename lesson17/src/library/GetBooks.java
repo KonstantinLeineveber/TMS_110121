@@ -11,8 +11,8 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class GetBooks {
-    public static ArrayList<Books> getAllBooks() {
-        ArrayList<Books> booksArrayList = new ArrayList<>();
+    public static ArrayList<Book> getAllBooks() {
+        ArrayList<Book> bookArrayList = new ArrayList<>();
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -21,7 +21,7 @@ public class GetBooks {
             NodeList nl = getElement.getChildNodes();
             for (int i = 0; i < nl.getLength(); i++) {
                 Node node = nl.item(i);
-                Books book = new Books();
+                Book book = new Book();
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
                     book.setId(Integer.parseInt(element.getAttribute("id")));
@@ -31,13 +31,13 @@ public class GetBooks {
                     book.setYear(element.getElementsByTagName("year").item(0).getChildNodes().item(0).getNodeValue());
                     book.setCover(element.getElementsByTagName("cover").item(0).getChildNodes().item(0).getNodeValue());
 
-                    booksArrayList.add(book);
+                    bookArrayList.add(book);
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return booksArrayList;
+        return bookArrayList;
     }
 }

@@ -1,13 +1,29 @@
 package exchanger;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Buyer {
 
     private int count = 1;
     private double USD = 1000;
     private double EUR = 1000;
     private double BYR = 100000;
+    public static ReentrantLock lock = new ReentrantLock();
 
-    public void CurrencyExchange() {
+    Buyer() {
+        new Thread(() -> {
+            lock.lock();
+            try {
+                System.out.print(Thread.currentThread().getName() + " сказал: ");
+                currencyExchange();
+            } catch (Exception e) {
+            } finally {
+                lock.unlock();
+            }
+        }).start();
+    }
+
+    public void currencyExchange() {
         if (count == 1) {
             System.out.println("Я пришел купить 300 USD");
             USD -= 300;
@@ -55,7 +71,6 @@ public class Buyer {
             System.out.println("USD = " + USD + '\n' + "EUR = " + EUR + '\n' + "BYR = " + BYR);
             count = 0;
         }
-
         count++;
     }
 }

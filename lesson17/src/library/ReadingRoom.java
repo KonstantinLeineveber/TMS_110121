@@ -1,10 +1,11 @@
 package library;
 
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Reading_Room {
+public class ReadingRoom {
 
 
 //    Написать клиент для работы библиотеки. В библиотеке доступны
@@ -16,7 +17,7 @@ public class Reading_Room {
 
     public static void main(String[] args) {
         Random random = new Random();
-        GetBooks.getAllBooks();
+        ArrayList<Book> a = GetBooks.getAllBooks();
 
         for (int i = 0; i < 5; i++) {
             new Thread(() -> {
@@ -25,7 +26,7 @@ public class Reading_Room {
                     int quantityBooks = random.nextInt(9) + 1;
                     for (int j = 0; j < quantityBooks; j++) {
                         int idBooks = random.nextInt(9);
-                        System.out.println(Thread.currentThread().getName() + " взял почитать " + GetBooks.getAllBooks().get(idBooks));
+                        System.out.println(Thread.currentThread().getName() + " взял почитать " + a.get(idBooks));
                     }
                     Thread.sleep(1000);
                     System.out.println(Thread.currentThread().getName() + " Вернул все книги обратно" + '\n');
